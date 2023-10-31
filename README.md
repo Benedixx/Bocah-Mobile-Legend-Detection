@@ -2,30 +2,25 @@
 
 ## Project Overview
 
-This project aims to classify a mobile legend player based on their comments using deep learning Natural Language Processing techniques implemented with TensorFlow Keras. The goal is to create a robust binary classification model that can accurately classify if the writer of the commment is a mobile legend player or not.
+This project aims to classify a mobile legend player based on their comments using deep learning natural language processing techniques implemented with TensorFlow Keras. The goal is to create a robust binary classification model that can accurately classify if the writer of the commment is a mobile legend player or not.
 
 ## Dataset
 
-The dataset used for this project can be found [here](https://drive.google.com/file/d/1i69ONNTpJ8vadzH0phnoT--6cGsSmWr2/view?usp=drive_link). It consists of brain MRI images with labeled tumor types. Ensure that you have downloaded and preprocessed the dataset as required before running the code or you can use the dataset that i provided on this repository.
+The dataset used for this project can be found [here](https://drive.google.com/file/d/1i69ONNTpJ8vadzH0phnoT--6cGsSmWr2/view?usp=drive_link). It consists of livestream and youtube comment chat from mobile legend or non-mobile legend(genshin impact, valorant, honkai star rail) livestream/video. The label of the dataset consist of '1' for mobile legend player and '0' for non-mobile legend player Ensure that you have downloaded and preprocessed the dataset as required before running the code or you can use the dataset that i provided on this repository.
 
 Dataset contains :<br>
-number of glioma training data: 702 <br>
-number of meningioma training data: 704<br>
-number of training data without tumors: 280<br>
-number of pituitary training data: 576<br>
-
-number of glioma validation data: 199<br>
-number of meningioma validation data: 209<br>
-number of without tumors validation data: 158<br>
-number of pituitary validation data: 268<br>
+There are 463 sentences for training.<br>
+There are 463 labels for training.<br>
+There are 116 sentences for validation.<br>
+There are 116 labels for validation.<br>
 
 
 ## Model Architecture
 
 The deep learning model is built using the TensorFlow Keras libraries. The architecture typically involves:
 
-- Preprocessing the MRI images (resizing, normalization, augmentation, etc.).
-- Creating a Convolutional Neural Network (CNN) with several convolutional and pooling layers and adding dense layers with 4 output.
+- Preprocessing the datasets(drop duplicate, tokenizing, padding).
+- Creating embedding layer with one layer of convulutional 1D layers then add GlobalAveragePooling, and add another dense layers.
 - Compiling the model with an appropriate loss function and optimizer.
 - Training the model on the dataset.
 
