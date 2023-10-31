@@ -20,7 +20,7 @@ There are 116 labels for validation.<br>
 The deep learning model is built using the TensorFlow Keras libraries. The architecture typically involves:
 
 - Preprocessing the datasets(drop duplicate, tokenizing, padding).
-- Creating embedding layer with one layer of convulutional 1D layers then add GlobalAveragePooling, and add another dense layers.
+- Creating embedding layer with one layer of convulutional 1D layers then add GlobalAveragePooling, and add dense layers.
 - Compiling the model with an appropriate loss function and optimizer.
 - Training the model on the dataset.
 
@@ -28,19 +28,14 @@ You can find the detailed architecture and code in the Jupyter Notebook or Pytho
 
 ## Training Result
 ### training and validation acccuracy graph
-![image](https://github.com/Benedixx/Brain-Tumor-Classification/assets/97221880/e4b658b1-8bcb-481e-ab62-e1189638554d)
+![image](https://github.com/Benedixx/Bocah-Mobile-Legend-Detection/assets/97221880/3fce62d5-a77e-4177-9d97-6ed3b5333fb7)
+
+### training and validation loss graph
+![image](https://github.com/Benedixx/Bocah-Mobile-Legend-Detection/assets/97221880/d22701d5-9a24-404f-bcf1-c85cba7e21dd)
 
 
 ### training and validation acccuracy on last epoch
 ```bash
-Epoch 21/25
-20/20 [==============================] - 2s 101ms/step - loss: 0.5212 - accuracy: 0.7688 - val_loss: 0.5506 - val_accuracy: 0.7917 - lr: 1.2500e-04
+Epoch 50/50
+15/15 [==============================] - 0s 10ms/step - loss: 0.2315 - accuracy: 0.8575 - val_loss: 0.2313 - val_accuracy: 0.9052
 ```
-## Improvement
-
-### Add predict input data
-
-The model can be used but there is no input predict after the model training, you can contribute to add the input predict.
-
-### Need to improve the accuracy
-The model accuracy can be improved, but since i have another deadline :3 and it takes a long time i have to temporarily stop. UwU
